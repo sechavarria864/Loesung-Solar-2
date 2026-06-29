@@ -380,3 +380,121 @@ counters.forEach((counter) => {
     });
   });
 })();
+
+/* ============================================================
+   SOLAR HERO — assets/js/script.js  (add-on / replacement)
+
+   INSTRUCTIONS:
+   • Keep all your existing script.js code EXCEPT for any old
+     hero-message, mobile-stat, and counter blocks you may have.
+   • The counter code below replaces any existing counter code.
+   • Paste this entire block at the BOTTOM of your script.js.
+   ============================================================ */
+
+/* ── COUNTERS (animates all [data-target] elements on scroll-in) ── */
+(function () {
+  var counters = document.querySelectorAll('.counter');
+  if (!counters.length) return;
+
+  var formatNumber = function (value) {
+    return new Intl.NumberFormat('de-DE').format(value);
+  };
+
+  var animateCounter = function (element, target, duration) {
+    duration = duration || 2000;
+    var hasAnimated = false;
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting || hasAnimated) return;
+        hasAnimated = true;
+
+        var startTime = performance.now();
+
+        var updateCounter = function (now) {
+          var elapsed = now - startTime;
+          var progress = Math.min(elapsed / duration, 1);
+          var easeProgress = 1 - Math.pow(1 - progress, 3);
+          var currentValue = Math.floor(target * easeProgress);
+          element.textContent = formatNumber(currentValue);
+
+          if (progress < 1) {
+            requestAnimationFrame(updateCounter);
+          } else {
+            element.textContent = formatNumber(target);
+          }
+        };
+
+        requestAnimationFrame(updateCounter);
+        observer.unobserve(element);
+      });
+    }, { threshold: 0.1 });
+
+    observer.observe(element);
+  };
+
+  counters.forEach(function (counter) {
+    var target = Number(counter.dataset.target || 0);
+    animateCounter(counter, target, 2000);
+  });
+})();
+
+/* ── SOLAR HERO CAROUSEL (desktop auto-scroll + height match; mobile native scroll) ── */
+(function () {
+  var outer = document.querySelector('.solar-hero__carousel-outer');
+  var track = document.getElementById('solarTrack');
+
+  if (!outer || !track) return;
+
+  var slides = track.querySelectorAll('.solar-hero__slide');
+  var total = slides.length;
+  var current = 0;
+  var autoTimer = null;
+  var CARD_WIDTH_RATIO = 0.80;
+  var GAP = 16;
+
+  /* On desktop: match slide height to left column so cards fill the full hero height */
+  function matchHeight() {
+    if (window.innerWidth < 768) return;
+    var leftCol = document.querySelector('.solar-hero__left');
+    if (!leftCol) return;
+    var h = leftCol.offsetHeight;
+    slides.forEach(function (s) {
+      s.style.height = h + 'px';
+      s.style.minHeight = h + 'px';
+    });
+  }
+
+  function isMobile() {
+    return window.innerWidth < 768;
+  }
+
+  /* Slide the track so the next card is partially visible to the right */
+  function updateTrack() {
+    if (isMobile()) return; /* native scroll handles mobile */
+    var cardW = outer.clientWidth * CARD_WIDTH_RATIO;
+    var offset = current * (cardW + GAP);
+    track.style.transform = 'translateX(-' + offset + 'px)';
+  }
+
+  function goNext() {
+    current = (current + 1) % total;
+    updateTrack();
+  }
+
+  function startAuto() {
+    if (autoTimer) clearInterval(autoTimer);
+    autoTimer = setInterval(function () {
+      if (!isMobile()) goNext();
+    }, 5000);
+  }
+
+  window.addEventListener('resize', function () {
+    matchHeight();
+    if (!isMobile()) updateTrack();
+  });
+
+  matchHeight();
+  updateTrack();
+  startAuto();
+})();
