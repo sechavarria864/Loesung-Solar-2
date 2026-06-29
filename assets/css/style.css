@@ -2468,9 +2468,11 @@ p {
   align-items: stretch;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 120px 0 72px 0;
+  padding: clamp(40px, 8vh, 100px) 0 clamp(32px, 5vh, 72px) 0;
   overflow: visible;
-  min-height: 600px;
+  min-height: unset;
+  height: calc(100dvh - 4rem); /* 4rem = header height */
+  box-sizing: border-box;
 }
 
 /* ── LEFT COLUMN ── */
@@ -2747,27 +2749,4 @@ p {
   .solar-hero__title {
     font-size: clamp(1.5rem, 3vw, 2rem);
   }
-}
-
-/* ── DESKTOP: constrain hero to viewport height ── */
-@media (min-width: 800px) {
-
-  .hero {
-    min-height: 100dvh;
-    max-height: 100dvh;
-    height: 100dvh;
-  }
-
-  .hero-content {
-    min-height: unset;
-    height: calc(100dvh - 6rem);
-    max-height: calc(100dvh - 6rem);
-  }
-
-  .hero-container {
-    min-height: unset;
-    height: calc(100dvh - 6rem);
-    max-height: calc(100dvh - 6rem);
-  }
-
 }
