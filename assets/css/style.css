@@ -2469,10 +2469,10 @@ p {
   align-items: stretch;
   max-width: 1280px;
   margin: 0 auto;
-  padding: clamp(24px, 4vh, 56px) 0 clamp(20px, 3vh, 40px) 0;
+  padding: clamp(16px, 2vh, 32px) 0 clamp(16px, 2vh, 32px) 0;
   overflow: visible;
   min-height: unset;
-  padding: clamp(24px, 4vh, 56px) 0 clamp(20px, 3vh, 40px) 0;
+  max-height: calc(100vh - 4rem);
   box-sizing: border-box;
 }
 
