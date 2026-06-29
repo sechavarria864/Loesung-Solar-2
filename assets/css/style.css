@@ -2471,6 +2471,7 @@ p {
   min-height: unset;
   max-height: calc(100vh - 4rem);
   box-sizing: border-box;
+  overflow-x: clip;
 }
 
 .solar-hero__left {
