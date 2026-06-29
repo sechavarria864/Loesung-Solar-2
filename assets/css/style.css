@@ -2748,3 +2748,26 @@ p {
     font-size: clamp(1.5rem, 3vw, 2rem);
   }
 }
+
+/* ── DESKTOP: constrain hero to viewport height ── */
+@media (min-width: 800px) {
+
+  .hero {
+    min-height: 100dvh;
+    max-height: 100dvh;
+    height: 100dvh;
+  }
+
+  .hero-content {
+    min-height: unset;
+    height: calc(100dvh - 6rem);
+    max-height: calc(100dvh - 6rem);
+  }
+
+  .hero-container {
+    min-height: unset;
+    height: calc(100dvh - 6rem);
+    max-height: calc(100dvh - 6rem);
+  }
+
+}
