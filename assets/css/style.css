@@ -2744,3 +2744,221 @@ p {
     min-height: 300px;
   }
 }
+
+/* ============================================================
+   SOLAR HERO v2  (sh2-*)
+   - Section = 100vh minus header height
+   - Left column: content centered vertically
+   - Right column: carousel cards stretch to full section height
+   - Overflow is intentional — cards bleed right
+============================================================ */
+
+/* ── Section shell ── */
+.sh2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;   /* easy to change ratio here */
+  min-height: calc(100vh - 4rem);   /* 4rem = header height */
+  background: #001F3F;
+  overflow: hidden;                 /* keeps left column clean */
+  position: relative;
+}
+
+/* ── Left column ── */
+.sh2__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(2rem, 5vw, 5rem) clamp(1.5rem, 4vw, 4rem);
+  z-index: 2;
+}
+
+/* Badge */
+.sh2__badge {
+  display: inline-block;
+  background: #F2E519;
+  color: #000;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.75rem;
+  margin-bottom: 1.5rem;
+  width: fit-content;
+}
+
+/* Title */
+.sh2__title {
+  color: #ffffff;
+  margin-bottom: 2rem !important;
+  /* font-size / font-family / uppercase already set by global h1 rule */
+}
+
+.sh2__highlight {
+  color: #F2E519;
+}
+
+/* CTA button */
+.sh2__btn {
+  display: inline-block;
+  background: #F2E519;
+  color: #000;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.9rem 1.75rem;
+  text-decoration: none;
+  width: fit-content;
+  transition: opacity 0.2s ease;
+  margin-bottom: 2rem;
+}
+.sh2__btn:hover { opacity: 0.88; }
+
+/* Hide short label on desktop */
+.sh2__btn-short { display: none; }
+
+/* Divider */
+.sh2__divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(255,255,255,0.15);
+  margin-bottom: 2rem;
+}
+
+/* Stats row */
+.sh2__stats {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+.sh2__stat-number {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 700;
+  color: #F2E519;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+.sh2__stat-label {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.4;
+}
+
+/* ── Right column / carousel outer ── */
+.sh2__carousel-outer {
+  position: relative;
+  overflow: visible;          /* lets cards bleed past section edge */
+  display: flex;
+  align-items: stretch;       /* track stretches to full column height */
+}
+
+/* Track: horizontal flex, no wrapping */
+.sh2__carousel-track {
+  display: flex;
+  gap: 16px;                  /* gap between cards — edit freely */
+  align-items: stretch;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  /* width and height are driven by the parent — no hardcoded values */
+  width: 100%;
+}
+
+/* Individual slide */
+.sh2__slide {
+  position: relative;
+  flex-shrink: 0;
+  width: 80%;                 /* first card takes 80% of right col; next peeks */
+  overflow: hidden;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 28px),
+    calc(100% - 28px) 100%,
+    0 100%
+  );
+}
+
+/* Image: fills the card completely — portrait / tall naturally */
+.sh2__slide img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Dark gradient overlay */
+.sh2__slide-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.10) 0%,
+    transparent 20%,
+    transparent 40%,
+    rgba(0,0,0,0.55) 65%,
+    rgba(0,0,0,0.88) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Slide label (bottom-left) */
+.sh2__slide-label {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.25rem;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.sh2__slide-number {
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+  font-weight: 700;
+  color: #F2E519;
+  line-height: 1;
+}
+.sh2__slide-sublabel {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.85);
+  letter-spacing: 0.03em;
+}
+
+/* ── Mobile (≤ 767px) ── */
+@media (max-width: 767px) {
+  .sh2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 55vw;
+    min-height: auto;
+    overflow: hidden;
+  }
+
+  .sh2__left {
+    padding: 2rem 1.25rem 1.5rem;
+    justify-content: flex-start;
+  }
+
+  .sh2__btn-full { display: none; }
+  .sh2__btn-short { display: inline; }
+
+  .sh2__stats {
+    gap: 1.5rem;
+  }
+
+  .sh2__carousel-outer {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .sh2__carousel-outer::-webkit-scrollbar { display: none; }
+
+  .sh2__carousel-track {
+    transform: none !important;   /* disable JS transform on mobile */
+    width: max-content;
+  }
+
+  .sh2__slide {
+    width: 75vw;
+    height: 100%;
+  }
+}
