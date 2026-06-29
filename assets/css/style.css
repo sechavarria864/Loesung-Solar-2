@@ -2462,7 +2462,7 @@ p {
 
 /* ── SOLAR HERO SECTION ── */
 .solar-hero {
-  background: #ffffff;
+  background: #F4F5F6;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: stretch;
@@ -2471,7 +2471,9 @@ p {
   padding: 120px 0 72px 48px;
   /* Allow carousel cards to bleed past the right edge */
   overflow: visible;
-  min-height: 600px;
+  min-height: 100vh;
+  max-height: 100vh;
+  box-sizing: border-box;
 }
 
 /* ── LEFT COLUMN ── */
@@ -2512,6 +2514,10 @@ p {
   margin: 0 0 2rem;
 }
 
+.solar-hero__title strong {
+  font-weight: normal;
+}
+
 /* Yellow highlight on "ohne Zugang zu Stromnetzen." */
 .solar-hero__highlight {
   background-color: #F2E519;
@@ -2521,6 +2527,8 @@ p {
   border-radius: 0;
   display: inline;
 }
+
+
 
 /* CTA button */
 .solar-hero__btn {
