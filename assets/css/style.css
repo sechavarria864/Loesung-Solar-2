@@ -245,105 +245,7 @@ p {
   border-bottom: 0;
 }
 
-.hero {
-  position: relative;
-  overflow: hidden;
-  background: #001f3f;
-  min-height: 100vh;
-  padding-top: 6rem;
-}
 
-.hero-image {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero-image-desktop {
-  display: block;
-  object-position: center;
-}
-
-.hero-image-tablet,
-.hero-image-mobile {
-  display: none;
-}
-
-.hero-overlay,
-.hero-overlay-blur {
-  position: absolute;
-  left: 0;
-  right: 0;
-  pointer-events: none;
-}
-
-.hero-overlay-desktop {
-  bottom: 0;
-  height: 16rem;
-  background: linear-gradient(
-    to top,
-    rgba(0, 31, 63, 1) 0%,
-    rgba(0, 31, 63, 0.7) 20%,
-    rgba(0, 31, 63, 0.5) 40%,
-    rgba(0, 31, 63, 0.3) 60%,
-    transparent 80%
-  );
-}
-
-.hero-overlay-blur-desktop {
-  bottom: 0;
-  height: 16rem;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  mask-image: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.8) 20%, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0.2) 60%, transparent 80%);
-  -webkit-mask-image: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.8) 20%, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0.2) 60%, transparent 80%);
-}
-
-.hero-overlay-mobile,
-.hero-overlay-blur-mobile {
-  display: none;
-}
-
-.hero-content {
-  position: relative;
-  padding: 0 1.5rem;
-  min-height: calc(100vh - 6rem);
-  display: flex;
-  flex-direction: column;
-}
-
-.hero-container {
-  max-width: 1280px;
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  min-height: calc(100vh - 6rem);
-}
-
-.hero-top {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.hero-copy {
-  position: relative;
-  z-index: 2;
-  color: #ffffff;
-}
-
-.desktop-hero-copy {
-  display: block;
-  width: 65%;
-}
-
-.mobile-hero-copy {
-  display: none;
-}
 
 .live-badge {
   display: flex;
@@ -372,13 +274,6 @@ p {
   background: #dc2626;
 }
 
-.hero-title {
-  margin: 0 0 1.2rem;
-  font-size: 3rem;
-  font-weight: normal;
-  line-height: 1.25;
-  color: #ffffff;
-}
 
 .hl-white,
 .hl-yellow {
@@ -406,21 +301,7 @@ p {
   background-color: #ffe600; /* matches the yellow in your brand */
 }
 
-.hero-text {
-  max-width: 40rem;
-  margin: 0 0 1.5rem;
-  font-size: 1rem;
-  line-height: 1.6;
-  opacity: 0.9;
-}
 
-.hero-actions {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-  flex-wrap: wrap;
-}
 
 .btn {
   display: inline-block;
@@ -447,96 +328,7 @@ p {
   -webkit-backdrop-filter: blur(8px);
 }
 
-.hero-bottom {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  z-index: 2;
-  margin-top: auto;
-}
 
-.hero-divider {
-  width: 100%;
-  height: 1px;
-  background: #f2e519;
-}
-
-.hero-bottom-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-  padding: 1rem 0;
-}
-
-.hero-stats {
-  display: flex;
-  gap: 2.5rem;
-  color: #ffffff;
-}
-
-.hero-stat-number {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 0.15rem;
-}
-
-.hero-stat-label {
-  font-size: 0.75rem;
-  opacity: 0.9;
-}
-
-.hero-message-box {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  width: 17.5rem;
-  color: #ffffff;
-}
-
-.hero-message-icon-wrap {
-  position: relative;
-  width: 2.5rem;
-  height: 2.5rem;
-  flex-shrink: 0;
-}
-
-.hero-message-icon {
-  position: absolute;
-  inset: 0;
-  width: 2.5rem;
-  height: 2.5rem;
-  object-fit: contain;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.hero-message-icon.active {
-  opacity: 1;
-}
-
-.hero-message-text-wrap {
-  position: relative;
-  flex: 1;
-  min-height: 2.5rem;
-}
-
-.hero-message-text {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 100%;
-  transform: translateY(calc(-50% + 10px));
-  opacity: 0;
-  font-size: 0.875rem;
-  line-height: 1.3;
-  transition: all 0.5s ease;
-}
-
-.hero-message-text.active {
-  opacity: 0.9;
-  transform: translateY(-50%);
-}
 
 .mobile-stat-rotator {
   position: relative;
@@ -581,74 +373,7 @@ p {
     display: inline-flex;
   }
 
-  .hero {
-    min-height: 95vh;
-  }
-
-  .hero-image-desktop {
-    display: none;
-  }
-
-  .hero-image-tablet {
-    display: none;
-  }
-
-  .hero-image-mobile {
-    display: block;
-    height: auto;
-    top: 0;
-    bottom: auto;
-  }
-
-  .hero-overlay-desktop,
-  .hero-overlay-blur-desktop {
-    display: none;
-  }
-
-  .hero-overlay-mobile,
-  .hero-overlay-blur-mobile {
-    display: block;
-    bottom: 0;
-    height: 70vh;
-  }
-
-  .hero-overlay-mobile {
-    background: linear-gradient(
-      to top,
-      rgba(0, 31, 63, 1) 0%,
-      rgba(0, 31, 63, 0.7) 20%,
-      rgba(0, 31, 63, 0.5) 40%,
-      rgba(0, 31, 63, 0.3) 60%,
-      transparent 100%
-    );
-  }
-
-  .hero-overlay-blur-mobile {
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    mask-image: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.8) 20%, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0.2) 60%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.8) 20%, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0.2) 60%, transparent 100%);
-  }
-
-  .hero-content,
-  .hero-container {
-    min-height: calc(95vh - 6rem);
-  }
-
-  .hero-top {
-    align-items: flex-end;
-    padding-bottom: 1rem;
-  }
-
-  .desktop-hero-copy,
-  .hero-bottom {
-    display: none;
-  }
-
-  .mobile-hero-copy {
-    display: block;
-    width: 100%;
-  }
+  
 
   .live-badge-mobile {
     margin-bottom: 1.25rem;
@@ -665,11 +390,7 @@ p {
     font-weight: 700;
   }
 
-  .hero-title-mobile {
-    font-size: 2.5rem;
-    line-height: 1.1;
-    margin-bottom: 1.25rem;
-  }
+  
 
   .mobile-actions {
     flex-direction: column;
@@ -683,16 +404,7 @@ p {
   }
 }
 
-@media (min-width: 480px) and (max-width: 767px) {
-  .hero-image-mobile {
-    display: none;
-  }
 
-  .hero-image-tablet {
-    display: block;
-    object-position: center 30%;
-  }
-}
 
 /* ============================================================
    PROJECT SIZE SECTION
@@ -2739,3 +2451,295 @@ p {
   display: inline;
 }
 
+/* ============================================================
+   SOLAR HERO — styles/css/style.css
+   
+   INSTRUCTIONS:
+   • Remove (or comment out) the entire old .hero { … } block and
+     ALL .hero-* rules from your existing style.css.
+   • Paste this block in their place (keep everything else as-is).
+   ============================================================ */
+
+/* ── SOLAR HERO SECTION ── */
+.solar-hero {
+  background: #ffffff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 120px 0 72px 48px;
+  /* Allow carousel cards to bleed past the right edge */
+  overflow: visible;
+  min-height: 600px;
+}
+
+/* ── LEFT COLUMN ── */
+.solar-hero__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 48px;
+}
+
+/* Pill badge */
+.solar-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  background: #F2E519;
+  border-radius: 999px;
+  padding: 0.4rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #000000;
+  width: fit-content;
+  margin-bottom: 1.5rem;
+}
+
+.solar-hero__badge strong {
+  font-weight: 700;
+  margin-left: 0.3em;
+}
+
+/* Title — Impact font, locally hosted */
+.solar-hero__title {
+  font-family: 'Impact', sans-serif;
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  font-weight: normal;
+  line-height: 1.15;
+  color: #000000;
+  margin: 0 0 2rem;
+}
+
+/* Yellow highlight on "ohne Zugang zu Stromnetzen." */
+.solar-hero__highlight {
+  background-color: #F2E519;
+  padding: 0.05em 0.18em 0.08em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  border-radius: 0;
+  display: inline;
+}
+
+/* CTA button */
+.solar-hero__btn {
+  display: inline-block;
+  background: #F2E519;
+  color: #000000;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  padding: 0.9rem 1.5rem;
+  text-decoration: none;
+  width: fit-content;
+  margin-bottom: 2rem;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.solar-hero__btn:hover {
+  opacity: 0.88;
+}
+
+.solar-hero__btn-short {
+  display: none;
+}
+
+/* Divider */
+.solar-hero__divider {
+  width: 100%;
+  height: 1px;
+  background: #F2E519;
+  margin-bottom: 1.25rem;
+}
+
+/* Stats row */
+.solar-hero__stats {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.solar-hero__stat-number {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+  color: #000000;
+}
+
+.solar-hero__stat-label {
+  font-size: 0.75rem;
+  color: #000000;
+  opacity: 0.8;
+}
+
+/* ── RIGHT COLUMN — overflow carousel (cards bleed right, just like .flexibilitaet) ── */
+.solar-hero__carousel-outer {
+  /* Cards are visible beyond the section edge — same technique as .flexibilitaet__carousel-outer */
+  overflow: visible;
+  clip-path: inset(0 -9999px 0 0);
+  align-self: stretch;
+}
+
+.solar-hero__carousel-track {
+  display: flex;
+  gap: 16px;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Individual slide cards */
+.solar-hero__slide {
+  flex-shrink: 0;
+  width: 80%;
+  min-height: 500px;
+  position: relative;
+  overflow: hidden;
+  /* Angled bottom-right corner — matches flexibilitaet style */
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%);
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.10)) drop-shadow(0 1px 3px rgba(0,0,0,0.08));
+}
+
+.solar-hero__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Overlay — only visible on mobile */
+.solar-hero__slide-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.88) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Stat label on card — only visible on mobile */
+.solar-hero__slide-label {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.solar-hero__slide-number {
+  font-size: 2.25rem;
+  font-weight: 200;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.solar-hero__slide-sublabel {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.85);
+  font-weight: 400;
+}
+
+/* ── MOBILE (≤767px) ── */
+@media (max-width: 767px) {
+
+  .solar-hero {
+    grid-template-columns: 1fr;
+    padding: 110px 0 0;
+    overflow: visible;
+    min-height: unset;
+  }
+
+  .solar-hero__left {
+    padding: 0 24px 32px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .solar-hero__badge {
+    margin-bottom: 1.25rem;
+  }
+
+  .solar-hero__title {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .solar-hero__btn {
+    margin-bottom: 0;
+  }
+
+  .solar-hero__btn-full {
+    display: none;
+  }
+
+  .solar-hero__btn-short {
+    display: inline;
+  }
+
+  /* Hide divider and stats on mobile (cards show them instead) */
+  .solar-hero__divider,
+  .solar-hero__stats {
+    display: none;
+  }
+
+  /* Horizontal native scroll on mobile */
+  .solar-hero__carousel-outer {
+    clip-path: none;
+    overflow-x: auto;
+    overflow-y: visible;
+    padding: 0 24px 24px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    align-self: unset;
+  }
+
+  .solar-hero__carousel-outer::-webkit-scrollbar {
+    display: none;
+  }
+
+  .solar-hero__carousel-track {
+    width: max-content;
+    transform: none !important; /* disable JS transform on mobile */
+    transition: none;
+    height: auto;
+  }
+
+  .solar-hero__slide {
+    width: 288px;
+    min-height: 280px;
+    height: 280px;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0 100%);
+  }
+
+  /* Show overlay and stat labels on mobile */
+  .solar-hero__slide-overlay {
+    opacity: 1;
+  }
+
+  .solar-hero__slide-label {
+    opacity: 1;
+  }
+
+  .solar-hero__slide-number {
+    font-size: 1.75rem;
+  }
+}
+
+/* ── TABLET (768–1023px) ── */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .solar-hero {
+    padding: 56px 0 56px 32px;
+  }
+
+  .solar-hero__left {
+    padding-right: 32px;
+  }
+
+  .solar-hero__title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+  }
+}
