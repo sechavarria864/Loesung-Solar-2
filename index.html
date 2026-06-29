@@ -47,96 +47,87 @@
   </nav>
 </header>
 
-<section class="solar-hero">
+<!-- ============================================================
+  SOLAR HERO v2  — full-viewport, tall images, overflow carousel
+  Classes: sh2-*  (no collision with old solar-hero)
+============================================================ -->
+<section class="sh2">
 
-<!-- ── LEFT COLUMN ── -->
-<div class="solar-hero__left">
+  <!-- ── LEFT COLUMN ── -->
+  <div class="sh2__left">
 
-<!-- Pill badge -->
-<div class="solar-hero__badge">
-VIDEO GUARD <strong>SOLAR</strong>
-</div>
+    <div class="sh2__badge">
+      VIDEO GUARD <strong>SOLAR</strong>
+    </div>
 
-<!-- Title — h1 using locally-hosted Impact font -->
-<h1 class="solar-hero__title">
-Vollständige Überwachung auch
-<strong><span class="solar-hero__highlight">ohne Zugang zum Stromnetz.</span></strong>
-</h1>
+    <h1 class="sh2__title">
+      Vollständige Überwachung auch
+      <strong><span class="sh2__highlight">ohne Zugang zum Stromnetz.</span></strong>
+    </h1>
 
-<!-- CTA button -->
-<a href="#" class="solar-hero__btn">
-<span class="solar-hero__btn-full">Kostenloses Angebot anfragen</span>
-<span class="solar-hero__btn-short">Angebot anfragen</span>
-</a>
+    <a href="#" class="sh2__btn">
+      <span class="sh2__btn-full">Kostenloses Angebot anfragen</span>
+      <span class="sh2__btn-short">Angebot anfragen</span>
+    </a>
 
-<!-- Divider + stats (desktop only) -->
-<div class="solar-hero__divider"></div>
+    <div class="sh2__divider"></div>
 
-<div class="solar-hero__stats">
-<div class="solar-hero__stat">
-<div class="solar-hero__stat-number counter" data-target="275301">0</div>
-<div class="solar-hero__stat-label">Gefahren abgewendet</div>
-</div>
-<div class="solar-hero__stat">
-<div class="solar-hero__stat-number counter" data-target="8217">0</div>
-<div class="solar-hero__stat-label">Geschützte Baustellen</div>
-</div>
-<div class="solar-hero__stat">
-<div class="solar-hero__stat-number counter" data-target="2226">0</div>
-<div class="solar-hero__stat-label">Zufriedene Kunden</div>
-</div>
-</div>
+    <div class="sh2__stats">
+      <div class="sh2__stat">
+        <div class="sh2__stat-number counter" data-target="275301">0</div>
+        <div class="sh2__stat-label">Gefahren abgewendet</div>
+      </div>
+      <div class="sh2__stat">
+        <div class="sh2__stat-number counter" data-target="8217">0</div>
+        <div class="sh2__stat-label">Geschützte Baustellen</div>
+      </div>
+      <div class="sh2__stat">
+        <div class="sh2__stat-number counter" data-target="2226">0</div>
+        <div class="sh2__stat-label">Zufriedene Kunden</div>
+      </div>
+    </div>
 
-</div>
+  </div>
 
-<!-- ── RIGHT COLUMN (carousel — cards slide right, visible overflow) ── -->
-<div class="solar-hero__carousel-outer">
-<div class="solar-hero__carousel-track" id="solarTrack">
+  <!-- ── RIGHT COLUMN — overflow carousel, images fill full section height ── -->
+  <div class="sh2__carousel-outer">
+    <div class="sh2__carousel-track" id="sh2Track">
 
-<div class="solar-hero__slide">
-<img
-src="./assets/images/Images/Solar 1.png"
-alt="Solar-Überwachung – 275.301 Gefahren abgewendet"
-loading="eager"
-width="480" height="600"
->
-<div class="solar-hero__slide-overlay"></div>
-<div class="solar-hero__slide-label">
-<span class="solar-hero__slide-number">275.301</span>
-<span class="solar-hero__slide-sublabel">Gefahren abgewendet</span>
-</div>
-</div>
+      <div class="sh2__slide">
+        <img src="./assets/images/Images/Solar 1.png"
+             alt="Solar-Überwachung – 275.301 Gefahren abgewendet"
+             loading="eager">
+        <div class="sh2__slide-overlay"></div>
+        <div class="sh2__slide-label">
+          <span class="sh2__slide-number">275.301</span>
+          <span class="sh2__slide-sublabel">Gefahren abgewendet</span>
+        </div>
+      </div>
 
-<div class="solar-hero__slide">
-<img
-src="./assets/images/Images/Solar 2.png"
-alt="Solar-Überwachung – 8.217 Geschützte Baustellen"
-loading="lazy"
-width="480" height="600"
->
-<div class="solar-hero__slide-overlay"></div>
-<div class="solar-hero__slide-label">
-<span class="solar-hero__slide-number">8.217</span>
-<span class="solar-hero__slide-sublabel">Geschützte Baustellen</span>
-</div>
-</div>
+      <div class="sh2__slide">
+        <img src="./assets/images/Images/Solar 2.png"
+             alt="Solar-Überwachung – 8.217 Geschützte Baustellen"
+             loading="lazy">
+        <div class="sh2__slide-overlay"></div>
+        <div class="sh2__slide-label">
+          <span class="sh2__slide-number">8.217</span>
+          <span class="sh2__slide-sublabel">Geschützte Baustellen</span>
+        </div>
+      </div>
 
-<div class="solar-hero__slide">
-<img
-src="./assets/images/Images/Solar 3.png"
-alt="Solar-Überwachung – 2.226 Zufriedene Kunden"
-loading="lazy"
-width="480" height="600"
->
-<div class="solar-hero__slide-overlay"></div>
-<div class="solar-hero__slide-label">
-<span class="solar-hero__slide-number">2.226</span>
-<span class="solar-hero__slide-sublabel">Zufriedene Kunden</span>
-</div>
-</div>
+      <div class="sh2__slide">
+        <img src="./assets/images/Images/Solar 3.png"
+             alt="Solar-Überwachung – 2.226 Zufriedene Kunden"
+             loading="lazy">
+        <div class="sh2__slide-overlay"></div>
+        <div class="sh2__slide-label">
+          <span class="sh2__slide-number">2.226</span>
+          <span class="sh2__slide-sublabel">Zufriedene Kunden</span>
+        </div>
+      </div>
 
-</div>
-</div>
+    </div>
+  </div>
 
 </section>
   <!-- ============================================================
