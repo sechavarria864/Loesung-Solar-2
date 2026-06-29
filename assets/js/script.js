@@ -424,3 +424,52 @@ if (menuToggle && mobileMenu) {
   updateTrack();
   startAuto();
 })();
+
+/* ── SOLAR HERO v2 CAROUSEL (sh2-*) ── */
+(function () {
+  var outer = document.querySelector('.sh2__carousel-outer');
+  var track = document.getElementById('sh2Track');
+  if (!outer || !track) return;
+
+  var slides = track.querySelectorAll('.sh2__slide');
+  var total  = slides.length;
+  var current = 0;
+  var GAP     = 16;   /* must match the CSS gap value */
+  var autoTimer = null;
+
+  /* On mobile the track uses native scroll — JS does nothing */
+  function isMobile() {
+    return window.innerWidth < 768;
+  }
+
+  function getCardWidth() {
+    /* card is 80% of outer container width */
+    return outer.clientWidth * 0.80;
+  }
+
+  function updateTrack() {
+    if (isMobile()) return;
+    var cardW  = getCardWidth();
+    var offset = current * (cardW + GAP);
+    track.style.transform = 'translateX(-' + offset + 'px)';
+  }
+
+  function goNext() {
+    current = (current + 1) % total;
+    updateTrack();
+  }
+
+  function startAuto() {
+    if (autoTimer) clearInterval(autoTimer);
+    autoTimer = setInterval(function () {
+      if (!isMobile()) goNext();
+    }, 5000);
+  }
+
+  window.addEventListener('resize', function () {
+    if (!isMobile()) updateTrack();
+  });
+
+  updateTrack();
+  startAuto();
+})();
