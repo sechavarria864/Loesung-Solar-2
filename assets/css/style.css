@@ -2467,23 +2467,20 @@ p {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: stretch;
-  max-width: 1280px;
-  margin: 0 auto;
   padding: clamp(16px, 2vh, 32px) 0 clamp(16px, 2vh, 32px) 0;
-  overflow-x: clip;
-overflow-y: visible;
   min-height: unset;
   max-height: calc(100vh - 4rem);
   box-sizing: border-box;
 }
 
-/* ── LEFT COLUMN ── */
 .solar-hero__left {
   display: flex;
   flex-direction: column;
   justify-content: center;
-gap: 1rem;
+  gap: 1rem;
   padding-right: 0;
+  max-width: 640px;
+  margin-left: max(24px, calc((100vw - 1280px) / 2));
 }
 
 /* Pill badge */
