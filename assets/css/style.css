@@ -3103,3 +3103,96 @@ p {
 .solar-intro--reversed .solar-intro__desktop > * {
   direction: ltr; /* restores text/content direction inside each column */
 }
+
+/* ── SOLAR FEATURES BAR ── */
+.solar-features {
+  background-color: #001F3F;
+  padding: 48px 24px;
+}
+
+.solar-features__grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: stretch;
+}
+
+/* Each of the 4 content columns */
+.solar-features__col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.25rem;
+  padding: 0 2rem;
+}
+
+.solar-features__col img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.solar-features__col p {
+  font-family: Arial, sans-serif;
+  font-size: var(--text-base);
+  font-weight: 700;
+  line-height: 1.5;
+  color: #ffffff;
+  margin: 0;
+  max-width: 100%;
+}
+
+/* Yellow vertical dividers between columns */
+.solar-features__divider {
+  width: 1px;
+  background-color: #F2E519;
+  align-self: stretch;
+  flex-shrink: 0;
+}
+
+/* ── MOBILE (≤767px) ── */
+@media (max-width: 767px) {
+  .solar-features {
+    padding: 40px 24px;
+  }
+
+  .solar-features__grid {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .solar-features__col {
+    padding: 28px 0;
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .solar-features__col img {
+    width: 48px;
+    height: 48px;
+  }
+
+  /* On mobile: horizontal dividers instead of vertical */
+  .solar-features__divider {
+    width: 100%;
+    height: 1px;
+    align-self: auto;
+  }
+}
+
+/* ── TABLET (768–1023px) ── */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .solar-features__col {
+    padding: 0 1.25rem;
+    gap: 1rem;
+  }
+
+  .solar-features__col p {
+    font-size: 0.875rem;
+  }
+}
