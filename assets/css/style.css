@@ -2464,6 +2464,7 @@ p {
 /* ── SOLAR HERO SECTION ── */
 /* ── Section wrapper ── */
 /* ── Section wrapper ── */
+/* ── Section wrapper ── */
 .solar-hero {
   background: #F4F5F6;
   display: grid;
@@ -2582,11 +2583,16 @@ p {
 .solar-hero__carousel-outer {
   overflow: visible;
   clip-path: inset(0 -9999px 0 0);
+  align-self: stretch;
+  display: flex;
+  align-items: center;
 }
 
 .solar-hero__carousel-track {
   display: flex;
   gap: 16px;
+  align-items: stretch;
+  height: 80%;
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -2594,7 +2600,8 @@ p {
 .solar-hero__slide {
   flex-shrink: 0;
   width: 75%;
-  height: clamp(360px, 72vh, 820px);
+  height: 100%;
+  min-height: 360px;
   position: relative;
   overflow: hidden;
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%);
@@ -2691,6 +2698,8 @@ p {
     padding: 0 24px 24px;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    align-self: auto;
+    display: block;
   }
 
   .solar-hero__carousel-outer::-webkit-scrollbar {
@@ -2699,6 +2708,7 @@ p {
 
   .solar-hero__carousel-track {
     width: max-content;
+    height: auto;
     transform: none !important;
     transition: none;
   }
@@ -2706,6 +2716,7 @@ p {
   .solar-hero__slide {
     width: 288px;
     height: 280px;
+    min-height: unset;
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0 100%);
   }
 
@@ -2737,6 +2748,6 @@ p {
   }
 
   .solar-hero__slide {
-    height: clamp(300px, 65vh, 680px);
+    min-height: 300px;
   }
 }
