@@ -3094,3 +3094,12 @@ p {
     font-size: 0.875rem;
   }
 }
+
+/* Reversed variant: image left, text right */
+.solar-intro--reversed .solar-intro__desktop {
+  direction: rtl; /* flips the column order */
+}
+
+.solar-intro--reversed .solar-intro__desktop > * {
+  direction: ltr; /* restores text/content direction inside each column */
+}
