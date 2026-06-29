@@ -2463,11 +2463,13 @@ p {
 
 /* ── SOLAR HERO SECTION ── */
 /* ── Section wrapper ── */
+/* ── Section wrapper ── */
 .solar-hero {
   background: #F4F5F6;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+  min-height: 100vh;
   padding: clamp(48px, 6vh, 80px) 0;
   overflow-x: hidden;
 }
@@ -2588,11 +2590,11 @@ p {
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Individual slide cards — explicit height like flexibilitaet__slide */
+/* Individual slide cards */
 .solar-hero__slide {
   flex-shrink: 0;
   width: 75%;
-  height: clamp(360px, 50vh, 520px);
+  height: clamp(360px, 72vh, 820px);
   position: relative;
   overflow: hidden;
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%);
@@ -2646,6 +2648,7 @@ p {
 
   .solar-hero {
     grid-template-columns: 1fr;
+    min-height: unset;
     padding: 110px 0 0;
     overflow: visible;
   }
@@ -2734,6 +2737,6 @@ p {
   }
 
   .solar-hero__slide {
-    height: clamp(300px, 45vh, 420px);
+    height: clamp(300px, 65vh, 680px);
   }
 }
