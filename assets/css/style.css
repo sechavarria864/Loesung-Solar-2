@@ -2969,3 +2969,128 @@ p {
 .data-protection__subtitle strong {
   color: #ffffff;
 }
+
+/* ============================================================
+   SOLAR INTRO SECTION — mirrors .kooi styles
+   ============================================================ */
+
+.solar-intro {
+  padding: 80px 24px;
+  background: #F4F5F6;
+}
+
+.solar-intro__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.solar-intro__desktop {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.solar-intro__mobile {
+  display: none;
+}
+
+.solar-intro__title-wrap {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.solar-intro__accent-bar {
+  width: 4px;
+  flex-shrink: 0;
+  background: #F2E519;
+}
+
+.solar-intro__title {
+  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.solar-intro__text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #5C5E62;
+  margin: 0 0 16px;
+}
+
+.solar-intro__text--bold {
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 32px;
+}
+
+.solar-intro__cta-row {
+  display: flex;
+  gap: 12px;
+}
+
+.solar-intro__btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.solar-intro__btn:hover {
+  opacity: 0.88;
+}
+
+.solar-intro__btn--primary {
+  background: #F2E519;
+  color: #000000;
+}
+
+.solar-intro__btn--secondary {
+  background: #EBEBEB;
+  color: #333333;
+}
+
+.solar-intro__image-wrap {
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%);
+}
+
+.solar-intro__image-wrap img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+.solar-intro__image-wrap--mobile img {
+  height: 256px;
+}
+
+@media (max-width: 767px) {
+  .solar-intro {
+    padding: 48px 24px;
+  }
+
+  .solar-intro__desktop {
+    display: none;
+  }
+
+  .solar-intro__mobile {
+    display: block;
+  }
+
+  .solar-intro__text {
+    font-size: 0.875rem;
+  }
+
+  .solar-intro__btn {
+    padding: 8px 16px;
+    font-size: 0.875rem;
+  }
+}
