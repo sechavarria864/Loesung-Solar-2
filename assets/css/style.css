@@ -2468,10 +2468,10 @@ p {
   align-items: stretch;
   max-width: 1280px;
   margin: 0 auto;
-  padding: clamp(40px, 8vh, 100px) 0 clamp(32px, 5vh, 72px) 0;
+  padding: clamp(24px, 4vh, 56px) 0 clamp(20px, 3vh, 40px) 0;
   overflow: visible;
   min-height: unset;
-  height: calc(100dvh - 4rem); /* 4rem = header height */
+  padding: clamp(24px, 4vh, 56px) 0 clamp(20px, 3vh, 40px) 0;
   box-sizing: border-box;
 }
 
@@ -2479,7 +2479,8 @@ p {
 .solar-hero__left {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+gap: 1rem;
   padding-right: 0;
 }
 
@@ -2495,7 +2496,7 @@ p {
   font-weight: 400;
   color: #000000;
   width: fit-content;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0;
 }
 
 .solar-hero__badge strong {
@@ -2510,7 +2511,7 @@ p {
   font-weight: normal;
   line-height: 1.15;
   color: #000000;
-  margin: 0 0 2rem;
+  margin: 0;
 }
 
 .solar-hero__title strong {
@@ -2539,7 +2540,7 @@ p {
   padding: 0.9rem 1.5rem;
   text-decoration: none;
   width: fit-content;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
   border: none;
   cursor: pointer;
   transition: opacity 0.2s ease;
@@ -2558,7 +2559,7 @@ p {
   width: 100%;
   height: 1px;
   background: #F2E519;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0;
 }
 
 /* Stats row */
@@ -2586,6 +2587,7 @@ p {
   overflow: visible;
   clip-path: inset(0 -9999px 0 0);
   align-self: stretch;
+  height: 100%;
 }
 
 .solar-hero__carousel-track {
@@ -2599,7 +2601,8 @@ p {
 .solar-hero__slide {
   flex-shrink: 0;
   width: 80%;
-  min-height: 500px;
+  height: 100%;
+  min-height: 0;
   position: relative;
   overflow: hidden;
   /* Angled bottom-right corner — matches flexibilitaet style */
@@ -2702,6 +2705,7 @@ p {
     -ms-overflow-style: none;
     scrollbar-width: none;
     align-self: unset;
+    
   }
 
   .solar-hero__carousel-outer::-webkit-scrollbar {
