@@ -2468,7 +2468,7 @@ p {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  padding: clamp(48px, 6vh, 80px) 0;
+  padding: clamp(80px, 10vh, 140px) 0;
   overflow-x: hidden;
 }
 
@@ -2478,7 +2478,7 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 1rem;
+  gap: 1.75rem;
   padding-right: 32px;
   max-width: 640px;
   margin-left: max(24px, calc((100vw - 1280px) / 2));
