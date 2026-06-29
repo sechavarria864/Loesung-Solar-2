@@ -2471,9 +2471,7 @@ p {
   padding: 120px 0 72px 48px;
   /* Allow carousel cards to bleed past the right edge */
   overflow: visible;
-  min-height: 100vh;
-  max-height: 100vh;
-  box-sizing: border-box;
+  min-height: 600px
 }
 
 /* ── LEFT COLUMN ── */
