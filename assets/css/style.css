@@ -2644,8 +2644,8 @@ p {
 /* ── MOBILE (≤767px) ── */
 @media (max-width: 767px) {
 
-   body {
-    padding-top: 1rem;
+  body {
+    padding-top: 0;
   }
 
   .solar-hero {
@@ -2660,17 +2660,12 @@ p {
     text-align: center;
     margin-left: 0;
     max-width: 100%;
-     gap: 1rem; /* ← overrides the desktop 2.75rem */
-  }
-
-  .solar-hero__badge {
-    
+    gap: 1rem;
   }
 
   .solar-hero__title {
     font-size: clamp(1.5rem, 6vw, 2rem);
     text-align: center;
-    
   }
 
   .solar-hero__btn-full {
@@ -2722,15 +2717,24 @@ p {
   .solar-hero__slide-number {
     font-size: 1.75rem;
   }
+
+  .solar-hero__slide-label::before {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 1px;
+    background: #F2E519;
+    margin-bottom: 8px;
+  }
 }
 
 /* ── TABLET (768–1023px) ── */
 @media (min-width: 768px) and (max-width: 1023px) {
 
   body {
-    padding-top: 0rem;
+    padding-top: 0;
   }
-  
+
   .solar-hero {
     padding: 56px 0;
   }
@@ -2746,18 +2750,7 @@ p {
   .solar-hero__slide {
     height: clamp(300px, 45vh, 420px);
   }
-
-   .solar-hero__slide-label::before {
-    content: '';
-    display: block;
-    width: 50%;
-    height: 1px;
-    background: #F2E519;
-    margin-bottom: 8px;
-  }
 }
-}
-
 /* ============================================================
    SOLARENERGIE SECTION — mirrors .flexibilitaet styles
    ============================================================ */
