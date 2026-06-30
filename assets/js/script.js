@@ -424,3 +424,30 @@ if (menuToggle && mobileMenu) {
   updateTrack();
   startAuto();
 })();
+
+// ── Solarenergie carousel ──
+(function () {
+  const track = document.getElementById('solarTrack');
+  const prevBtn = document.getElementById('solarPrev');
+  const nextBtn = document.getElementById('solarNext');
+  if (!track || !prevBtn || !nextBtn) return;
+
+  let index = 0;
+  const slides = track.querySelectorAll('.solarenergie__slide');
+  const total = slides.length;
+
+  function getSlideWidth() {
+    return slides[0].offsetWidth + 16; // slide width + gap
+  }
+
+  function update() {
+    track.style.transform = `translateX(-${index * getSlideWidth()}px)`;
+    prevBtn.disabled = index === 0;
+    nextBtn.disabled = index === total - 1;
+  }
+
+  prevBtn.addEventListener('click', () => { if (index > 0) { index--; update(); } });
+  nextBtn.addEventListener('click', () => { if (index < total - 1) { index++; update(); } });
+
+  update();
+})();
