@@ -3310,6 +3310,18 @@ p {
     grid-template-columns: 1fr;
   }
 
+  .night-intro__image-wrap {
+    margin-bottom: 24px;
+  }
+
+  .night-intro__image-wrap img {
+    height: 256px; /* matches solar-intro mobile image height */
+  }
+
+  .night-intro__title-wrap {
+    margin-bottom: 24px;
+  }
+
   .night-intro__text {
     font-size: 0.875rem;
   }
