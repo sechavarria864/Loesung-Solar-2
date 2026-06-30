@@ -2722,6 +2722,11 @@ p {
 
 /* ── TABLET (768–1023px) ── */
 @media (min-width: 768px) and (max-width: 1023px) {
+
+  body {
+    padding-top: 1.5rem;
+  }
+  
   .solar-hero {
     padding: 56px 0;
   }
