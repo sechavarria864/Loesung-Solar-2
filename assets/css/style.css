@@ -3106,6 +3106,10 @@ p {
     padding: 8px 16px;
     font-size: 0.875rem;
   }
+
+  .solar-intro__image-wrap--mobile {
+    margin-bottom: 24px;
+  }
 }
 
 /* Reversed variant: image left, text right */
