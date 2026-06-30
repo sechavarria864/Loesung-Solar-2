@@ -3110,6 +3110,10 @@ p {
   .solar-intro__image-wrap--mobile {
     margin-bottom: 24px;
   }
+
+  .solar-intro__title-wrap {
+    margin-bottom: 24px;
+  }
 }
 
 /* Reversed variant: image left, text right */
