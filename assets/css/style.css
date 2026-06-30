@@ -2656,16 +2656,17 @@ p {
     text-align: center;
     margin-left: 0;
     max-width: 100%;
+     gap: 1rem; /* ← overrides the desktop 2.75rem */
   }
 
   .solar-hero__badge {
-    margin-bottom: 1.25rem;
+    
   }
 
   .solar-hero__title {
     font-size: clamp(1.5rem, 6vw, 2rem);
     text-align: center;
-    margin-bottom: 1.5rem;
+    
   }
 
   .solar-hero__btn-full {
