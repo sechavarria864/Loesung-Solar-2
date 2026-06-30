@@ -3204,11 +3204,14 @@ p {
   .solar-features__sub {
     font-size: 0.75rem;
   }
+
 }
 
 /* ============================================================
    NIGHT INTRO SECTION — image left, text right
    ============================================================ */
+
+
 .night-intro {
   padding: 80px 24px;
   background: #F4F5F6;
@@ -3224,6 +3227,10 @@ p {
   grid-template-columns: 1fr 1fr;
   gap: 48px;
   align-items: center;
+}
+
+.night-intro__mobile {
+  display: none;
 }
 
 .night-intro__title-wrap {
@@ -3307,18 +3314,22 @@ p {
   }
 
   .night-intro__desktop {
-    grid-template-columns: 1fr;
+    display: none;
   }
 
-  .night-intro__image-wrap {
-    margin-bottom: 24px;
-  }
-
-  .night-intro__image-wrap img {
-    height: 256px; /* matches solar-intro mobile image height */
+  .night-intro__mobile {
+    display: block;
   }
 
   .night-intro__title-wrap {
+    margin-bottom: 24px;
+  }
+
+  .night-intro__image-wrap--mobile img {
+    height: 256px;
+  }
+
+  .night-intro__image-wrap--mobile {
     margin-bottom: 24px;
   }
 
