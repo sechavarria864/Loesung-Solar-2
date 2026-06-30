@@ -2644,6 +2644,10 @@ p {
 /* ── MOBILE (≤767px) ── */
 @media (max-width: 767px) {
 
+   body {
+    padding-top: 1.5rem;
+  }
+
   .solar-hero {
     grid-template-columns: 1fr;
     padding: 110px 0 0;
